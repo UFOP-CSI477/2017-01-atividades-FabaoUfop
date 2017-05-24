@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula_1 Bootstrap</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  </head>
+  <body>
+    <!-- Classe ancestral é o body-->
+
+      <div class="row">
+        <div class="col-md-4">
+          Lado Esquerdo
+        </div>
+          <div class="col-md-4">
+            <div class= "jumbotron text-center">
+              <h1>Página Principal</h1>
+              <h2>Opções da aplicação</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              Lado Direito a
+            </div>
+          </div>
+
+
+    <button type="button" class="btn">Cadastrar</button>
+    <button type="button" class="btn-defaultn btn-lg">Cadastrar</button><!-- largura maxima-->
+    <button type="button" class="btn-primary btn-md">Cadastrar</button><!-- medio-->
+    <button type="button" class="btn-success btn-sm">Cadastrar</button>
+    <button type="button" class="btn-info btn-xs">Cadastrar</button>
+    <button type="button" class="btn-warning active">Cadastrar</button>
+    <button type="button" class="btn-danger disabled">Cadastrar</button>
+    <button type="button" class="btn-link">Cadastrar</button>
+    <input type="submit" name="nome" value="Enviar" class="btn btn-primary btn-lg">
+
+    <a href="#" class="btn btn-info">Informações</a>
+    <div class="row">
+      <div class="col-md-4">
+        <table class="table table-bordered table-hover table-condensed table-striped" >
+          <caption>Lista de Alunos</caption>
+            <!--Elemento estrutura, acessibilidade -->
+          <tr>
+          <thead >
+              <th>Matrícula</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+          </thead>
+        </tr>
+          <tr>
+            <tbody>
+              <td>1</td>
+              <td>Ana</td>
+              <td>ana@webmaster.com.br</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>João</td>
+              <td>joao@webmaster.com.br</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Victor</td>
+              <td>victor@webmaster.com.br</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Total de alunos(a)</td>
+              <td>3</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>

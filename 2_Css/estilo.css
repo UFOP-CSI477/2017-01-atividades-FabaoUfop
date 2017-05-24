@@ -1,0 +1,19 @@
+
+p{font-family: arial;
+   color: gree;
+    border:2px solid green;
+    border-radius:5px;}
+
+h1 {font-family: arial,tahoma,times;
+      font-size: 22pt;
+      color: #ff6666}
+/*Classe Generica*/
+.fundo{background-color:blue;}
+/*seletor elemento especifico associado */
+h3.destaque{color: #c9c9c9;
+          text-align: center;}
+          /*Id*/
+#codigo{background-color: #c6c6c6;
+        color:blue;
+        border-style: solid;
+        border-radius:15px;}
