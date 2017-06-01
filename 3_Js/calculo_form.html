@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <title>Calculadora com Formulario JS</title>
+    <script>
+
+    function calcular(){
+        var n1 = parseInt(document.dados.n1.value);
+        var n2 = parseInt(document.dados.n2.value);
+
+        if(document.dados.n1.value.length == 0 || isNaN(n1)){
+          window.alert("Informe o primeiro numero corretamente!!");
+          //document.getElementById("grupoN1").classList.add("has-error");
+          //document.getElementById("alertN1").style.display="none";
+          document.dados.n1.value ="";
+          document.dados.n1.focus();
+          return;
+        }
+      //  document.getElementById("grupoN1").classList.add("has-error");
+      //  document.getElementById("alertN1").style.display ="block";
+        if (document.dados.n2.value.length == 0 || isNaN(n2)){
+            window.alert("Informe o segundo numero!!");
+            //document.getElementById("grupoN2").classList.remove("has-error");
+      //      document.getElementById("alertN2").style.display ="none";
+            document.dados.n2.value = "";
+            document.dados.n2.focus();
+            return;
+        }
+      //  document.getElementById("grupoN2").classList.remove("has-error");
+      //  document.getElementById("alertN2").style.display ="block";
+        var res = parseInt(n1)+parseInt(n2);
+        document.dados.resultado.value = res;
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Formatar com bootstrap -->
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Validação e calculo</h1>
+      </div>
+    <form name="dados">
+          <div id ="grupon1" class="form-group">
+          <label for="n1">Primeiro</label>
+          <input type="text" name="n1" class="form-control" placeholder="12345">
+          <div class="alert alert-danger" id ="alertn1" style="display:none" id="alertN1">
+            Informe o primeiro num corretamente</div>
+          </div>
+
+          <div id ="grupon2" class="form-group">
+          <label for="n2">Segundo</label>
+          <input type="text" name="n2" class="form-control" placeholder="12345">
+          <div class="alert alert-danger" id ="alertn2" style="display:none" id="alertN2">
+            Informe o segundo num corretamente</div>
+          </div>
+
+          <div id ="resultado" class="form-group">
+          <label for="res">resultado</label>
+          <input type="text" name="resultado" class="form-control" placeholder="12345" disabled="disabled">
+          </div>
+          <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+          <button type="reset" class="btn btn-primary" value="limpar">Limpar</button>
+    </form>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src = "./jquery/jquery-3.2.1.min.js"></script>
+
+  </body>
+</html>
