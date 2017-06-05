@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="jquery-3.2.1.js"></script>
+    <script src="funcoes.js"></script>
+    <script src="form.js"></script>
+
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <title>Calculadora com Formulario JS-Jquery</title>
+  </head>
+  <body>
+    <!-- Formatar com bootstrap -->
+
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h1>Validação e calculo</h1>
+    </div>
+
+    <form name="dados">
+
+          <div id ="grupoN1" class="form-group">
+          <label for="n1">Primeiro</label>
+          <input type="text" name="n1" class="form-control" placeholder="12345">
+          <div class="alert alert-danger" id ="alertn1" style="display:none" id="alertN1">
+            Informe o primeiro num corretamente</div>
+          </div>
+
+          <div id ="grupoN2" class="form-group">
+          <label for="n2">Segundo</label>
+          <input type="text" name="n2" class="form-control" placeholder="12345">
+          <div class="alert alert-danger" id ="alertn2" style="display:none" id="alertN2">
+            Informe o segundo num corretamente</div>
+          </div>
+
+          <div id ="resultado" class="form-group">
+          <label for="res">resultado</label>
+          <input type="text" name="resultado" class="form-control" placeholder="12345" disabled="disabled">
+          </div>
+          <button type="button" name="calculo" class="btn btn-primary">Calcular</button>
+          <button type="reset" class="btn btn-primary" value="limpar">Limpar</button>
+    </form>
+</div>
+  </body>
+</html>
