@@ -7,48 +7,60 @@
     h1{font-family:arial;color: blue;
       }
     form{font-family:arial;color:inherit;}
-
+    *{
+      margin: center-block;
+      padding: auto;
+    }
     </style>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <h1>Cadastro de alunos(as)</h1>
 
-<div class="cadastro" id="form">
-  <form name="cadastro" method="post" action="validacao.html">
-    <input type="hidden" name="id" value="12345" />
-    Nome: <input type="text" name="nome" /><br>
-    <input type="radio" name="genero" value="F">Feminino
-    <input type="radio" name="genero" value="M">Masculino <br>
-    <input type="checkbox" name="area" />Web<br>
-    <input type="checkbox" name="area" />BD<br>
-    <input type="checkbox" name="area" />Redes<br>
-    <input type="checkbox" name="area" />ES<br>
-</div>
-      <div id="listaCidades">
-        <select name="cidade">
-            <option value="1">João Monlevade</option>
-            <option value="2">Itaúna</option>
-            <option value="3">Itabira</option>
-            <option value="4">Belo Horizonte</option>
-            <option value="5">Alvinópolis</option>
-          </select>
+    <div class="row">
+      <div class ="col-md-4">
+        <form name="cadastro" method="post" action="validacao.html">
+        <input type="hidden" name="id" value="12345" />
+        Nome: <input type="text" name="nome" /><br>
+        <input type="radio" name="genero" value="F">Feminino
+        <input type="radio" name="genero" value="M">Masculino <br>
+        <input type="checkbox" name="area" />Web<br>
+        <input type="checkbox" name="area" />BD<br>
+        <input type="checkbox" name="area" />Redes<br>
+        <input type="checkbox" name="area" />ES<br>
       </div>
-      Usuário: <input type="text" name="usuario" /><br>
-      Senha: <input type="password" name="senha" /><br>
-      <textarea name="comentario"
-        cols="20" rows="3">
-        Comentários
-      </textarea>
-      <input type="range" name="satisfacao"
-        min="0" max="10">
-      <input type="number" name="quantidade" min="0"
-        max="100">
-      <input type="color" name="corFundo">
-      <input type="date" name="nascimento">
-      <input type="submit" value="Cadastrar" />
-      <input type="reset" value="Limpar" />
-    </form>
+    </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <select name="cidade">
+          <option value="1">João Monlevade</option>
+          <option value="2">Itaúna</option>
+          <option value="3">Itabira</option>
+          <option value="4">Belo Horizonte</option>
+          <option value="5">Alvinópolis</option>
+        </select>
+    </div>
+  </div>
+      <div class="row">
+        <div class="col-md-4">
+          Usuário: <input type="text" name="usuario" /><br>
+          Senha: <input type="password" name="senha" /><br>
+          <textarea name="comentario"
+            cols="20" rows="3">
+            Comentários
+          </textarea>
+          <input type="range" name="satisfacao"
+            min="0" max="10">
+          <input type="number" name="quantidade" min="0"
+            max="100">
+          <input type="color" name="corFundo">
+          <input type="date" name="nascimento">
+          <input type="submit" value="Cadastrar" />
+          <input type="reset" value="Limpar" />
+      </div>
+    </div>
+  </form>
     <a href="index.html">Voltar</a>
   </body>
 </html>
