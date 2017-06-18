@@ -1,71 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Formulário</title>
 
-    <link rel="stylesheet" type="text/css"
-        href="estilos.css" />
-
-  </head>
-  <body>
-
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- JavaScript -->
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <div class="jumbotron text-center">
     <h1>Cadastro de alunos(as)</h1>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+        <h2 class="text-center bg-info">Dados de alunos</h2>
+          <!-- Formulario divido por divs , horizontal e em linha -->
+        <form action = "#" class="horizontal">
+          <div class="form-group">
+            <label for="nome" class="control-label">Nome</label>
+            <input type="text" name="nome" class="form-control" placeholder="Digite seu nome">
+          </div>
+          <div class="form-group">
+            <label for="Logradouro">Logradouro</label>
+            <input type="text" name="logradouro" class="form-control" placeholder="Informe seu endereço">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" placeholder="email@dominio.com.br">
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="genero" value="M">Maculino
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="genero" value="F">Feminino
+            </label>
+          </div>
+          <div class="data-toggle">
+            <input type="date" name="nascimento">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-center bg-info">Local e Area atuação</h2>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="area" value="1">Web
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="area" value="2">Desk
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="area" value="3">B.D
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="cidade">Cidade</label>
+              <select class="form-control" id="cidade">
+                <option value="1">João Monlevade</option>
+                <option value="2">Itabira</option>
+                <option value="1">São Gonçalo</option>
+              </select>
+            </div>
+        </div>
 
-    <form name="cadastro" method="post" action="validacao.html">
-
-      <input type="hidden" name="id" value="12345" />
-
-      Nome: <input type="text" name="nome" /><br>
-
-      <input type="radio" name="genero" value="F">Feminino
-
-      <input type="radio" name="genero" value="M">Masculino <br>
-
-      <input type="checkbox" name="area" />Web<br>
-
-      <input type="checkbox" name="area" />BD<br>
-
-      <input type="checkbox" name="area" />Redes<br>
-
-      <input type="checkbox" name="area" />ES<br>
-
-
-      <div id="listaCidades">
-        <select name="cidade">
-            <option value="1">João Monlevade</option>
-            <option value="2">Itaúna</option>
-            <option value="3">Itabira</option>
-            <option value="4">Belo Horizonte</option>
-            <option value="5">Alvinópolis</option>
-          </select>
+        <div class="col-md-4">
+          <h2 class="text-center bg-info">Comentarios e Satisfação</h2>
+          <textarea name="comentario" cols="70" rows="3">Comentários</textarea>
+          <input type="color" name="corFundo">
+          <input type="range" name="satisfacao" min="0" max="10">
+          <input type="number" name="quantidade" min="0" max="100">
+        </div>
       </div>
+    <a class="button btn-success" href="validacao.html">Cadastrar</a>
+    <button type="reset" class="btn-success">Limpar</button>
+    <a class="button btn-success" href="index.html">Voltar</a>
+  </form>
 
+</body>
 
-      Usuário: <input type="text" name="usuario" /><br>
-
-      Senha: <input type="password" name="senha" /><br>
-
-      <textarea name="comentario"
-        cols="20" rows="3">
-        Comentários
-      </textarea>
-
-      <input type="range" name="satisfacao"
-        min="0" max="10">
-
-      <input type="number" name="quantidade" min="0"
-        max="100">
-
-      <input type="color" name="corFundo">
-
-      <input type="date" name="nascimento">
-
-      <input type="submit" value="Cadastrar" />
-      <input type="reset" value="Limpar" />
-
-    </form>
-    <a href="index.html">Voltar</a>
-
-  </body>
 </html>
