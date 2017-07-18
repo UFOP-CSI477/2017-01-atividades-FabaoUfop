@@ -12,8 +12,11 @@
 */
 use App\aluno;
 
-Route::get('/', function() {
+Route::get('/welcome', function() {
     return view('welcome');
+});
+Route::get('/', function() {
+    return view('principal');
 });
 //endereço e caminho
 //Route::get('/alunos',function(){
@@ -22,4 +25,6 @@ Route::get('/', function() {
   //return $alunos;
 //});
 
-  Route::get('/alunos','AlunosController@index');
+Route::get('/alunos','AlunosController@index');
+
+Route::resource( 'cidades','CidadeController');

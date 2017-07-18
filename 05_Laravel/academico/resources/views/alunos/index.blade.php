@@ -2,6 +2,6 @@
 @section('conteudo')
 <h1>Alunos</h1>
   @foreach ($alunos as $a)
-  {{$a->id}} - {{$a->nome}}
+  <p>{{$a->id}} - {{$a->nome}}</p>
   @endforeach
 @endsection
