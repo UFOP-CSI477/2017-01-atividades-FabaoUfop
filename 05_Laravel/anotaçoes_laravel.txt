@@ -1,0 +1,19 @@
+Anotações laravel:
+
+Criação projeto laravel 
+(na pasta htdocs do xampp)
+
+composer create-project larvael/laravel sdd --prefer-dist
+
+
+Comandos Composer Artisan
+
+php artisan make: model -m -c -r
+(cria modelo, controller e rotas no terminal (tabelas automaticamente))
+
+
+php artisan tinker(testa banco direto no terminal)
+
+php artisan migrate (cria tabelas a partir do migrations)	
+
+php artisan route:list (demonstra metodos implementados)
