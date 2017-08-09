@@ -1,21 +1,22 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 //Rotas para página inicial do sistema:
 Route::get('/', function () {
-    return view('principal');
+    return view('welcome');
 });
+//Rotas para cada area do sistema
 
+/**
+Route::get('geral', function () {
+    return view('geral')
+});
+Route::get('pacientes', function(){
+    return view('pacientes')
+);
+Route::get('administradores',function(){
+    return view('administradores')
+});
+**/
 
 //implementar rota
 //Route::get('/home', 'HomeController@index')->name('home');
@@ -28,14 +29,13 @@ Route::get('/procedures/index.php',function($id){
 
 //Rotas para controlar os recursos do sistema
 
-//Route::resource('/procedures', 'ProceduresController');
-//Route::resource('/tests', 'TestsController');
+Route::resource('/procedures', 'ProceduresController');
+Route::resource('/tests', 'TestsController');
 
 //Rotas para /users
 Route::get('user/{id}', function ($id) {
     return 'User '.$id;
 });
-
 Auth::routes();
 
 //Rotas para nomear os tipos de usuários do sistema
