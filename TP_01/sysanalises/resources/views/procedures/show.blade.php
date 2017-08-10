@@ -1,18 +1,26 @@
 @extends('principal')
 @section('conteudo')
-<h1>Excluir Procedimentos</h1>
-
+<div class="jumbotron text-center">
+  <h1>Excluir procedimento</h1>
+</div>
 <a href="/procedures">Voltar</a>
-<p>Id:{{$procedures->id}}</p>
-<p>Nome:{{$procedures->nome}}</p>
-<p>Nome Fantasia:{{$procedures->nomeFantasia}}</p>
-<p>Telefone:{{$procedures->telefone}}</p>
-
-<form method="post" action="/procedures/{{$procedures->id}}">
-  <!-- cria tokens para as rotas -->
-  {{csrf_field()}}
-  <!-- cria input do tipo RAIDEN e cria a rota para o methodo pretendido-->
-  {{method_field('DELETE')}}
-  <input type="submit" value="Confirmar Exclusão">
-</form>
+</div>
+    <div class="row">
+      <div class="col-sm-4">
+        <form method ="post" action="/procedures/{{procedures->id}}" class="horizontal">
+          <!-- comando para reconhecer o cliente -->
+          {{csrf_field()}}
+          <!-- conversão do metodo post -->
+          {{method_field('DELETE')}}
+          <div class="form-group">
+            <label for="nome" class="control-label">Nome</label>
+            <input type="text" name="nome" class="form-control" placeholder="Nome" value="{{$procedures->nome}}">
+          </div>
+          <div class="form-group">
+            <label for="Preco">Preço</label>
+            <input type="text" name="preço" class="form-control" placeholder="preço" value="{{$procedures->preco}}">
+          </div>
+        <input type="submit" value="Confirmar Exclusão">
+        </div>
+    </div>
 @endsection

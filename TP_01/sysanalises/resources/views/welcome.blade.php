@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -81,6 +82,7 @@
                   </div>
             </div>
         </div>
+
         <footer class="container-fluid text-center">
         <p>Sistema de Analyses Fabao Ufop</p>
         </footer>

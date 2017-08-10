@@ -1,14 +1,25 @@
 @extends('principal')
 @section('conteudo')
-<h1>Editar Procedimentos</h1>
-<!--ver se ira solicitar pelo nome ou ID -->
-<form method ="post" action="/procedimentos/{{$procedures->id}}">
-  <!-- comando para reconhecer o cliente -->
-  {{csrf_field()}}
-  <!-- conversão do metodo post -->
-  {{method_field('PATCH')}}
-	Nome:<input type = "text" name ="nome" maxlenght="100" value="{{$procedimentos->nome}}" ><br>
-	Preço :<input type = "text" name ="preco" maxlenght="20" value="{{$procedures->preco}}"><br>
-	<input type="submit" name ="botaoSalvar" value="Salvar">
-</form>
+<div class="jumbotron text-center">
+  <h1>Editar procedimento</h1>
+</div>
+</div>
+    <div class="row">
+      <div class="col-sm-4">
+        <form method ="post" action="/procedures/{{procedures->id}}" class="horizontal">
+          <!-- comando para reconhecer o cliente -->
+          {{csrf_field()}}
+          <!-- conversão do metodo post -->
+          {{method_field('PATCH')}}
+          <div class="form-group">
+            <label for="nome" class="control-label">Nome</label>
+            <input type="text" name="nome" class="form-control" placeholder="Nome" value="{{$procedures->nome}}">
+          </div>
+          <div class="form-group">
+            <label for="Preço">Preço</label>
+            <input type="text" name="preço" class="form-control" placeholder="preço" value="{{$procedures->preco}}">
+          </div>
+          <input type="submit" name ="botaoSalvar" value="Salvar">
+        </div>
+    </div>
 @endsection
