@@ -10,21 +10,38 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\aluno;
 
-Route::get('/welcome', function() {
+use App\Aluno;
+
+Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', function() {
-    return view('principal');
+
+Route::get('estados', function () {
+	$estados = DB::table('estados')->get();
+	return view('estados')->with('estados', $estados);
 });
-//endereço e caminho
-//Route::get('/alunos',function(){
-  //$alunos = DB::table('alunos')->get();
-  //$alunos = Aluno::all();
-  //return $alunos;
-//});
 
-Route::get('/alunos','AlunosController@index');
+Route::get('cidades', function () {
+	$alunos = DB::table('cidades')->get();
+	return view('cidades')->with('cidades', $alunos);
+});
 
-Route::resource( 'cidades','CidadeController');
+Route::get('alunosold', function () {
+	$alunos = Aluno::all();
+	return view('alunos.index')->with('alunos', $alunos);
+});
+
+Route::get('/alunosold/{aluno}', function ($id) {
+	$aluno = DB::table('alunos')->find($id);
+	return view('alunos.show')->with('aluno', $aluno);
+});
+
+Route::resource('disciplinas', 'DisciplinaController');
+Route::resource('alunos', 'AlunoController');
+
+Route::resource('cidades', 'CidadeController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

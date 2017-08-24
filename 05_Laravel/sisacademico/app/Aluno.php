@@ -1,11 +1,15 @@
 <?php
-// comando php artisan tinker: metodos get,first, all, outras
-  namespace App;
-//microframe Illuminate camada Model
-  use Illuminate\Database\Eloquent\Model;
-  //estende (herda) de modelo diretamente da tabela
-  class Aluno extends Model{
-    public $timestamps = false;
-  }
 
-?>
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Aluno extends Model
+{
+    //
+    //protected $table = 'cidades';
+    public function isMatriculado() {
+        return true;
+    }
+
+}

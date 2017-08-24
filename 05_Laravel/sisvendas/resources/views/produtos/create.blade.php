@@ -2,17 +2,17 @@
 
 @section('conteudo')
 
-<h1>Inserir produtos</h1>
+<h1>Inserir produto</h1>
+<a href="/produtos">Voltar</a>
 
-<form method ="post" action="/produtos">
-  <!-- comando para reconhecer o cliente -->
-  {{csrf_field()}}
+<form method="post" action="/produtos">
 
-	Nome: <input type = "text" name ="nome" maxlenght="100"><br>
-	Preço: <input type="text"  name="preco"><br>
+  {{ csrf_field() }}
 
-	<input type="submit" name ="botaoSalvar" value="Salvar">
+  Nome: <input type="text" name="nome" maxlength="100"><br>
+  Preço: <input type="text" name="preco"> <br>
 
+  <input type="submit" name="botaoSalvar" value="Salvar">
 
 </form>
 

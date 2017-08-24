@@ -7,6 +7,13 @@ use App\Produto;
 
 class ProdutosController extends Controller
 {
+
+
+    public function __construct(){
+      $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +22,7 @@ class ProdutosController extends Controller
     public function index()
     {
         $produtos = Produto::all();
-        return view ('produtos.index')->with('produtos', $produtos);
+        return view('produtos.index')->with('produtos', $produtos);
     }
 
     /**
@@ -25,7 +32,7 @@ class ProdutosController extends Controller
      */
     public function create()
     {
-        return view ('produtos.create');
+        return view('produtos.create');
     }
 
     /**
@@ -36,10 +43,12 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-      //  dd($request->all());
-        Produto::create($request->all());
-        return redirect ('/produtos');
+        Produto::create( $request->all() );
+        $request->session()->flash('mensagem','produto inserido com sucesso');
+          $request->session()->flash('tipo','alert-danger');
+        return redirect('/produtos');
     }
+
     /**
      * Display the specified resource.
      *
@@ -48,20 +57,22 @@ class ProdutosController extends Controller
      */
     public function show(Produto $produto)
     {
-          return view('produtos.show')->with ('produto',$produto);
+        return view('produtos.show')->with('produto', $produto);
     }
+
     /**
      * Show the form for editing the specified resource.
+     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit(Produto $produto)
     {
-      //dd($id);
-      //$produto = Produto::find($id);
-      //dd ($produto);
-      return view('produtos.edit')->with ('produto',$produto);
+        //dd($id);
+        //$produto = Produto::find($id);
+        return view('produtos.edit')->with('produto', $produto);
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -76,6 +87,7 @@ class ProdutosController extends Controller
         $produto->save();
         return redirect('/produtos');
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -84,7 +96,7 @@ class ProdutosController extends Controller
      */
     public function destroy(Produto $produto)
     {
-      $produto->delete();
-      return redirect('/produtos');
+        $produto->delete();
+        return redirect('/produtos');
     }
 }

@@ -3,19 +3,39 @@
 @section('conteudo')
 
 <h1>Fornecedores</h1>
-<tbody>
-<table>
+<a class="btn btn-primary" href="/fornecedores/create">Inserir</a>
 
+@if(Session::has('message'))
+<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+@endif
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Nome Fantasia</th>
+      <th>Telefone</th>
+      <th>Editar</th>
+      <th>Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
 @foreach($fornecedores as $f)
 <tr>
-<td>{{$f->id}} </td>
-<td>{{$f->nome}} </td>
-<td>{{$f->nomeFantasia}}</td>
-<td>{{$f->telefone}}</td>
-<td><a href="/fornecedores/{{$f->id}}/edit">Editar</a></td>
-<td><a href="/fornecedores/{{$f->id}}">Excluir</a></td>
+
+  <td>{{ $f->id }}</td>
+  <td>{{ $f->nome }}</td>
+  <td>{{ $f->nomeFantasia }}</td>
+  <td>{{ $f->telefone }}</td>
+  <td><a href="/fornecedores/{{ $f->id }}/edit"><i class="fa fa-pencil fa-fw"></i>Editar</a></td>
+  <td><a href="/fornecedores/{{ $f->id }}"><i class="fa fa-trash-o fa-fw"></i> Excluir</a></td>
+
 </tr>
 @endforeach
-</table>
 </tbody>
+</table>
+
+<h2></h2>
+
 @endsection

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <title>Validação Cadastro</title>
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <div class="container-fluid">
+        <h1>Validação Cadastro com JS</h1>
+        <form name="cadastroSimples">
+        <div class="form-row" action="/action_page_post.php" method="post">
+          <div class="form-group col-md-6">
+          <label for="inputEmail4" class="col-form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="fname" required>
+        </div>
+        <div class="form-group col-md-6" action="/action_page_post.php" method="post">
+          <label for="inputPassword4" class="col-form-label">Senha</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="fname" required>
+        </div>
+      </div>
+      <div class="form-group"  action="/action_page_post.php" method="post">
+        <label for="inputAddress" class="col-form-label">Endereço</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Rua e número" name="fname" required>
+      </div>
+      <div class="form-group"  action="/action_page_post.php" method="post">
+        <label for="inputAddress2" class="col-form-label" action="/action_page_post.php" method="post">Complemento</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Complemento" name="fname" required>
+      </div>
+      <div class="form-row"  action="/action_page_post.php" method="post">
+        <div class="form-group col-md-6">
+          <label for="inputCity" class="col-form-label" action="/action_page_post.php" method="post" name="fname" required>Cidade</label>
+          <input type="text" class="form-control" id="Cidade">
+        </div>
+        <div class="form-group col-md-4"  action="/action_page_post.php" method="post">
+          <label for="inputState" class="col-form-label">Estado</label>
+          <select id="inputState" class="form-control" name="fname" required>MinasGerais</select>
+        </div>
+        <div class="form-group col-md-2"  action="/action_page_post.php" method="post">
+          <label for="inputZip" class="col-form-label">Numero</label>
+          <input type="text" class="form-control" id="Numero" name="fname" required>
+        </div>
+      </div>
+      <div class="form-group" action="/action_page_post.php" method="post">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="fname" required> Declaro ser verdade
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" name="fname" required>Registrar</button>
+    </form>
+      </div>
+
+    </div>
+    </body>
+</html>

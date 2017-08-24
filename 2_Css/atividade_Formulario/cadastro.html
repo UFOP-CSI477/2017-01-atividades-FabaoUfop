@@ -83,6 +83,7 @@
           <input type="number" name="quantidade" min="0" max="100">
         </div>
       </div>
+      
     <a class="button btn-success" href="validacao.html">Cadastrar</a>
     <button type="reset" class="btn-success">Limpar</button>
     <a class="button btn-success" href="index.html">Voltar</a>
@@ -91,3 +92,20 @@
 </body>
 
 </html>
+
+
+-- -----------------------------------------------------
+-- Create user
+-- -----------------------------------------------------
+DROP USER IF EXISTS `sisdemocracia`@`localhost`;
+CREATE USER `sisdemocracia`@`localhost` identified by "123456";
+GRANT ALL PRIVILEGES ON analyses.* TO `sisdemocracia`@`localhost`;
+FLUSH PRIVILEGES;
+-- -----------------------------------------------------
+
+
+
+
+
+
+

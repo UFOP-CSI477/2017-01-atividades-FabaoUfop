@@ -1,15 +1,19 @@
 @extends('principal')
+
 @section('conteudo')
-<h1>Inserir Fornecedores</h1>
-<form method ="post" action="/fornecedores">
-  <!-- comando para reconhecer o cliente -->
-  {{csrf_field()}}
 
-	Nome: <input type = "text" name ="nome" maxlenght="100"><br>
-	Nome Fantasia: <input type="text"  name="nomeFantasia"  maxlength="100"><br>
-  Telefone:<input type="text" name="telefone" maxlength="15"><br>
+<h1>Inserir fornecedor</h1>
+<a href="/fornecedores">Voltar</a>
 
-	<input type="submit" name ="botaoSalvar" value="Salvar">
+<form method="post" action="/fornecedores">
+
+  {{ csrf_field() }}
+
+  Nome: <input type="text" name="nome" maxlength="100"><br>
+  Nome Fantasia: <input type="text" name="nomeFantasia"> <br>
+  Telefone: <input type="text" name="telefone"> <br>
+
+  <input type="submit" name="botaoSalvar" value="Salvar">
 
 </form>
 
